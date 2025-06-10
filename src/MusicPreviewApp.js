@@ -236,45 +236,47 @@ export default function MusicPreviewApp() {
           top: 0,
           left: 0,
           right: 0,
-          height: 320,
           zIndex: 200,
-          overflow: "hidden",
           background: "#181818",
           boxShadow: "0 2px 16px #000a",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center"
+          paddingBottom: 24
         }}
       >
-        {/* Video sfondo trasparente */}
+        {/* Video sopra, visibile per intero */}
         {album.video && (
-          <video
-            src={album.video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              opacity: 0.25,
-              zIndex: 1,
-              pointerEvents: "none"
-            }}
-          />
+          <div style={{
+            width: "100%",
+            background: "#000",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}>
+            <video
+              src={album.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                maxWidth: "900px",
+                height: "auto",
+                aspectRatio: "16/9",
+                opacity: 0.25,
+                background: "#000"
+              }}
+            />
+          </div>
         )}
-        {/* Player sopra il video */}
+        {/* Player sotto il video */}
         <div
           style={{
             position: "relative",
             zIndex: 2,
             width: "100%",
             maxWidth: 600,
-            margin: "0 auto"
+            margin: "0 auto",
+            marginTop: -80 // sovrappone leggermente il player al video
           }}
         >
           <Card className="card" style={{ margin: 0, borderRadius: 16, background: "rgba(24,24,24,0.95)" }}>
@@ -359,7 +361,7 @@ export default function MusicPreviewApp() {
     <div
       className="app-container"
       style={{
-        paddingTop: currentTrackIndex !== null && !playerBar ? 340 : 0,
+        paddingTop: currentTrackIndex !== null && !playerBar ? 400 : 0,
         minHeight: "100vh"
       }}
     >
