@@ -1,34 +1,101 @@
 import { useState, useRef, useEffect } from "react";
 import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
-import { SkipBack, SkipForward, Play, Pause } from "lucide-react";
+import { SkipBack, SkipForward, Play, Pause, X, Minimize2 } from "lucide-react";
 
-// Struttura: array di album, ognuno con nome, copertina e tracce
-const albums = [
+// Struttura: array di album, ognuno con nome, copertina, video e tracce
+ const albums =  [
   {
-    name: "Hip-Hop",
-    cover: process.env.PUBLIC_URL + "/covers/cover1.jpg",
-    tracks: [
+    "name": "Chansons - Cherié",
+    "cover": "/music/Chansons - Cherié/cover.jpg",
+    "video": "/music/Chansons - Cherié/video.mp4",
+    "tracks": [
       {
-        name: "Dumb",
-        url: process.env.PUBLIC_URL + "/music/dumb.mp3",
-        cover: process.env.PUBLIC_URL + "/covers/cover1.jpg"
+        "name": "Aurevoir",
+        "url": "/music/Chansons - Cherié/Aurevoir.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
       },
       {
-        name: "I love it",
-        url: process.env.PUBLIC_URL + "/music/I love it.mp3",
-        cover: process.env.PUBLIC_URL + "/covers/cover1.jpg"
+        "name": "Carmen",
+        "url": "/music/Chansons - Cherié/Carmen.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Chanson d'amour",
+        "url": "/music/Chansons - Cherié/Chanson d'amour.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Chanson",
+        "url": "/music/Chansons - Cherié/Chanson.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Diddle",
+        "url": "/music/Chansons - Cherié/Diddle.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Ethereal Sun",
+        "url": "/music/Chansons - Cherié/Ethereal Sun.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "La vie est une boîte de nuit",
+        "url": "/music/Chansons - Cherié/La vie est une boîte de nuit.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Lover",
+        "url": "/music/Chansons - Cherié/Lover.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Mon coeur",
+        "url": "/music/Chansons - Cherié/Mon coeur.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Moon - interlude",
+        "url": "/music/Chansons - Cherié/Moon - interlude.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
+      },
+      {
+        "name": "Tous les jours",
+        "url": "/music/Chansons - Cherié/Tous les jours.mp3",
+        "cover": "/music/Chansons - Cherié/cover.jpg"
       }
     ]
   },
   {
-    name: "Techno Ambient",
-    cover: process.env.PUBLIC_URL + "/covers/cover2.png",
-    tracks: [
+    "name": "Chansons 2",
+    "cover": "/music/Chansons 2/cover.jpg",
+    "video": "/music/Chansons 2/video.mp4",
+    "tracks": [
       {
-        name: "I love it",
-        url: process.env.PUBLIC_URL + "/music/I love it.mp3",
-        cover: process.env.PUBLIC_URL + "/covers/cover2.png"
+        "name": "Ain't It Beautiful",
+        "url": "/music/Chansons 2/Ain't It Beautiful.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "Be myself ",
+        "url": "/music/Chansons 2/Be myself .mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "Can't complain",
+        "url": "/music/Chansons 2/Can't complain.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "Chanson triste",
+        "url": "/music/Chansons 2/Chanson triste.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "Songbird",
+        "url": "/music/Chansons 2/Songbird.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
       }
     ]
   }
@@ -40,13 +107,16 @@ export default function MusicPreviewApp() {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [playerBar, setPlayerBar] = useState(false);
   const audioRef = useRef(null);
 
-  const tracks = albums[selectedAlbumIdx].tracks;
+  const album = albums[selectedAlbumIdx];
+  const tracks = album.tracks;
 
   const playTrack = (index) => {
     setCurrentTrackIndex(index);
     setIsPlaying(true);
+    setPlayerBar(false);
   };
 
   const togglePlayPause = () => {
@@ -119,8 +189,185 @@ export default function MusicPreviewApp() {
     setProgress(0);
   };
 
+  // Barra compatta
+  const renderPlayerBar = () => {
+    if (currentTrackIndex === null) return null;
+    const track = tracks[currentTrackIndex];
+    return (
+      <div style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        background: "#181818",
+        color: "#fff",
+        display: "flex",
+        alignItems: "center",
+        padding: "8px 16px",
+        zIndex: 100,
+        boxShadow: "0 -2px 8px #000a"
+      }}>
+        <img src={track.cover} alt="" style={{ width: 40, height: 40, borderRadius: 8, marginRight: 12 }} />
+        <span style={{ flex: 1 }}>{track.name}</span>
+        <Button onClick={prevTrack} disabled={currentTrackIndex === 0} style={{ background: "none", color: "#fff" }}>
+          <SkipBack />
+        </Button>
+        <Button onClick={togglePlayPause} style={{ background: "#1db954", color: "#fff" }}>
+          {isPlaying ? <Pause /> : <Play />}
+        </Button>
+        <Button onClick={nextTrack} disabled={currentTrackIndex === tracks.length - 1} style={{ background: "none", color: "#fff" }}>
+          <SkipForward />
+        </Button>
+        <Button onClick={() => setPlayerBar(false)} style={{ background: "none", color: "#fff" }}>
+          <Minimize2 />
+        </Button>
+      </div>
+    );
+  };
+
+  // Player completo sopra la lista
+  const renderFullPlayer = () => {
+    if (currentTrackIndex === null) return null;
+    const track = tracks[currentTrackIndex];
+    return (
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 320,
+          zIndex: 200,
+          overflow: "hidden",
+          background: "#181818",
+          boxShadow: "0 2px 16px #000a",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        {/* Video sfondo trasparente */}
+        {album.video && (
+          <video
+            src={album.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              opacity: 0.25,
+              zIndex: 1,
+              pointerEvents: "none"
+            }}
+          />
+        )}
+        {/* Player sopra il video */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            width: "100%",
+            maxWidth: 600,
+            margin: "0 auto"
+          }}
+        >
+          <Card className="card" style={{ margin: 0, borderRadius: 16, background: "rgba(24,24,24,0.95)" }}>
+            <CardContent>
+              <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                <img
+                  src={track.cover}
+                  alt=""
+                  className="track-cover"
+                  style={{ width: 64, height: 64 }}
+                />
+                <div>
+                  <div style={{ fontWeight: 700, fontSize: 18 }}>{track.name}</div>
+                  <div style={{ fontSize: 14, color: "#aaa" }}>{album.name}</div>
+                </div>
+                <Button
+                  style={{
+                    background: "transparent",
+                    color: "#fff",
+                    marginLeft: "auto",
+                    border: "none",
+                    boxShadow: "none",
+                    fontSize: 20,
+                    padding: 0,
+                  }}
+                  onClick={() => setPlayerBar(true)}
+                  title="Minimizza player"
+                >
+                  <Minimize2 />
+                </Button>
+                <Button
+                  style={{
+                    background: "transparent",
+                    color: "#fff",
+                    border: "none",
+                    boxShadow: "none",
+                    fontSize: 20,
+                    padding: 0,
+                  }}
+                  onClick={() => {
+                    setCurrentTrackIndex(null);
+                    setIsPlaying(false);
+                  }}
+                  title="Chiudi player"
+                >
+                  <X />
+                </Button>
+              </div>
+              <div
+                className="progress-bar"
+                onClick={handleSeek}
+                style={{ margin: "24px 0" }}
+              >
+                <div className="progress" style={{ width: `${progress}%` }} />
+              </div>
+              <div className="player-controls">
+                <Button onClick={prevTrack} disabled={currentTrackIndex === 0} style={{ background: "none", color: "#fff" }}>
+                  <SkipBack />
+                </Button>
+                <Button onClick={togglePlayPause} style={{ background: "#1db954", color: "#fff" }}>
+                  {isPlaying ? <Pause /> : <Play />}
+                </Button>
+                <Button onClick={nextTrack} disabled={currentTrackIndex === tracks.length - 1} style={{ background: "none", color: "#fff" }}>
+                  <SkipForward />
+                </Button>
+              </div>
+              <audio
+                ref={audioRef}
+                src={track.url}
+                autoPlay={isPlaying}
+                controls={false}
+                style={{ width: "100%", marginTop: 8 }}
+              />
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="app-container">
+    <div
+      className="app-container"
+      style={{
+        paddingTop: currentTrackIndex !== null && !playerBar ? 340 : 0,
+        minHeight: "100vh"
+      }}
+    >
+      {/* Player sopra la lista */}
+      {currentTrackIndex !== null && !playerBar && renderFullPlayer()}
+      {/* Player barra */}
+      {currentTrackIndex !== null && playerBar && renderPlayerBar()}
+
       <h1 style={{ color: "#1db954", textAlign: "center", marginBottom: 24 }}>Music Preview</h1>
       <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
         <div style={{ minWidth: 200 }}>
@@ -149,7 +396,7 @@ export default function MusicPreviewApp() {
           </div>
         </div>
         <div style={{ flex: 1 }}>
-          <h2 style={{ color: "#fff", fontSize: 20, marginBottom: 12 }}>{albums[selectedAlbumIdx].name}</h2>
+          <h2 style={{ color: "#fff", fontSize: 20, marginBottom: 12 }}>{album.name}</h2>
           <div className="track-list">
             {tracks.map((track, idx) => (
               <div
@@ -158,58 +405,20 @@ export default function MusicPreviewApp() {
                 style={{
                   background: idx === currentTrackIndex ? "#282828" : "transparent",
                   borderRadius: idx === currentTrackIndex ? 8 : 0,
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer"
                 }}
                 onClick={() => playTrack(idx)}
               >
-                <img src={track.cover} alt="" className="track-cover" />
+                {/* Icona cover brano */}
+                <img src={track.cover} alt="" className="track-cover" style={{ width: 40, height: 40, borderRadius: 8, marginRight: 12 }} />
                 <div className="track-info">
                   <div style={{ fontWeight: 600 }}>{track.name}</div>
                 </div>
               </div>
             ))}
           </div>
-          {currentTrackIndex !== null && tracks[currentTrackIndex] && (
-            <Card className="card" style={{ marginTop: 32 }}>
-              <CardContent>
-                <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-                  <img
-                    src={tracks[currentTrackIndex].cover}
-                    alt=""
-                    className="track-cover"
-                    style={{ width: 64, height: 64 }}
-                  />
-                  <div>
-                    <div style={{ fontWeight: 700, fontSize: 18 }}>{tracks[currentTrackIndex].name}</div>
-                  </div>
-                </div>
-                <div
-                  className="progress-bar"
-                  onClick={handleSeek}
-                  style={{ margin: "24px 0" }}
-                >
-                  <div className="progress" style={{ width: `${progress}%` }} />
-                </div>
-                <div className="player-controls">
-                  <Button onClick={prevTrack} disabled={currentTrackIndex === 0} style={{ background: "none", color: "#fff" }}>
-                    <SkipBack />
-                  </Button>
-                  <Button onClick={togglePlayPause} style={{ background: "#1db954", color: "#fff" }}>
-                    {isPlaying ? <Pause /> : <Play />}
-                  </Button>
-                  <Button onClick={nextTrack} disabled={currentTrackIndex === tracks.length - 1} style={{ background: "none", color: "#fff" }}>
-                    <SkipForward />
-                  </Button>
-                </div>
-                <audio
-                  ref={audioRef}
-                  src={tracks[currentTrackIndex].url}
-                  autoPlay={isPlaying}
-                  controls={false}
-                  style={{ width: "100%", marginTop: 8 }}
-                />
-              </CardContent>
-            </Card>
-          )}
         </div>
       </div>
     </div>
