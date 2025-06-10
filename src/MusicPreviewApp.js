@@ -204,7 +204,7 @@ export default function MusicPreviewApp() {
         display: "flex",
         alignItems: "center",
         padding: "8px 16px",
-        zIndex: 100,
+        zIndex: 9999,
         boxShadow: "0 -2px 8px #000a"
       }}>
         <img src={track.cover} alt="" style={{ width: 40, height: 40, borderRadius: 8, marginRight: 12 }} />
@@ -239,18 +239,22 @@ export default function MusicPreviewApp() {
           zIndex: 200,
           background: "#181818",
           boxShadow: "0 2px 16px #000a",
-          paddingBottom: 24
+          paddingBottom: 0,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center"
         }}
       >
-        {/* Video sopra, visibile per intero */}
+        {/* Video responsive */}
         {album.video && (
-          <div style={{
-            width: "100%",
-            background: "#000",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-          }}>
+          <div
+            style={{
+              width: "100vw",
+              maxWidth: "100%",
+              position: "relative",
+              background: "#000"
+            }}
+          >
             <video
               src={album.video}
               autoPlay
@@ -258,12 +262,13 @@ export default function MusicPreviewApp() {
               muted
               playsInline
               style={{
-                width: "100%",
-                maxWidth: "900px",
-                height: "auto",
-                aspectRatio: "16/9",
+                width: "100vw",
+                height: "56vw", // 16:9 ratio
+                maxHeight: "60vh",
+                objectFit: "cover",
                 opacity: 0.25,
-                background: "#000"
+                background: "#000",
+                display: "block"
               }}
             />
           </div>
@@ -276,10 +281,13 @@ export default function MusicPreviewApp() {
             width: "100%",
             maxWidth: 600,
             margin: "0 auto",
-            marginTop: -80 // sovrappone leggermente il player al video
+            marginTop: 0,
+            background: "rgba(24,24,24,0.95)",
+            borderRadius: 16,
+            boxShadow: "0 2px 16px #000a"
           }}
         >
-          <Card className="card" style={{ margin: 0, borderRadius: 16, background: "rgba(24,24,24,0.95)" }}>
+          <Card className="card" style={{ margin: 0, borderRadius: 16, background: "transparent" }}>
             <CardContent>
               <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                 <img
@@ -361,7 +369,7 @@ export default function MusicPreviewApp() {
     <div
       className="app-container"
       style={{
-        paddingTop: currentTrackIndex !== null && !playerBar ? 400 : 0,
+        paddingTop: currentTrackIndex !== null && !playerBar ? "70vw" : 0,
         minHeight: "100vh"
       }}
     >
