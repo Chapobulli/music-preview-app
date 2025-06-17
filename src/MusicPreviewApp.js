@@ -93,8 +93,33 @@ import { SkipBack, SkipForward, Play, Pause, X, Minimize2 } from "lucide-react";
         "cover": "/music/Chansons 2/cover.jpg"
       },
       {
+        "name": "Flowers",
+        "url": "/music/Chansons 2/Flowers.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "I Wish You Knew",
+        "url": "/music/Chansons 2/I Wish You Knew.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "No way",
+        "url": "/music/Chansons 2/No way.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
         "name": "Songbird",
         "url": "/music/Chansons 2/Songbird.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "Take you home",
+        "url": "/music/Chansons 2/Take you home.mp3",
+        "cover": "/music/Chansons 2/cover.jpg"
+      },
+      {
+        "name": "Technolove",
+        "url": "/music/Chansons 2/Technolove.mp3",
         "cover": "/music/Chansons 2/cover.jpg"
       }
     ]
