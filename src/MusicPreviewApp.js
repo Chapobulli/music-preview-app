@@ -4,7 +4,7 @@ import { Button } from "./components/ui/button";
 import { SkipBack, SkipForward, Play, Pause, X, Minimize2 } from "lucide-react";
 
 // Struttura: array di album, ognuno con nome, copertina, video e tracce
- const albums =  [
+const albums =  [
   {
     "name": "Chansons - Cherié",
     "cover": "/music/Chansons - Cherié/cover.jpg",
@@ -121,6 +121,253 @@ import { SkipBack, SkipForward, Play, Pause, X, Minimize2 } from "lucide-react";
         "name": "Technolove",
         "url": "/music/Chansons 2/Technolove.mp3",
         "cover": "/music/Chansons 2/cover.jpg"
+      }
+    ]
+  },
+  {
+    "name": "DEMO EXP",
+    "cover": "",
+    "video": "",
+    "tracks": [
+      {
+        "name": "ALL BLACK RUNNER - All Black Shit",
+        "url": "/music/DEMO EXP/ALL BLACK RUNNER - All Black Shit.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Dark Hustle (Sound swap)",
+        "url": "/music/DEMO EXP/Dark Hustle (Sound swap).mp3",
+        "cover": ""
+      },
+      {
+        "name": "Double dose ",
+        "url": "/music/DEMO EXP/Double dose .mp3",
+        "cover": ""
+      },
+      {
+        "name": "Get The Bag",
+        "url": "/music/DEMO EXP/Get The Bag.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Hop in my ride",
+        "url": "/music/DEMO EXP/Hop in my ride.mp3",
+        "cover": ""
+      },
+      {
+        "name": "It's All On Me",
+        "url": "/music/DEMO EXP/It's All On Me.mp3",
+        "cover": ""
+      },
+      {
+        "name": "kid laroi - Gone",
+        "url": "/music/DEMO EXP/kid laroi - Gone.mp3",
+        "cover": ""
+      },
+      {
+        "name": "kid laroi - Outside",
+        "url": "/music/DEMO EXP/kid laroi - Outside.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Lil tecca  - No Handouts",
+        "url": "/music/DEMO EXP/Lil tecca  - No Handouts.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Lil Yatchy - Speeding up",
+        "url": "/music/DEMO EXP/Lil Yatchy - Speeding up.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Mad",
+        "url": "/music/DEMO EXP/Mad.mp3",
+        "cover": ""
+      },
+      {
+        "name": "No Breaks Feat Playboi Carti",
+        "url": "/music/DEMO EXP/No Breaks Feat Playboi Carti.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Outta Sight",
+        "url": "/music/DEMO EXP/Outta Sight.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Playboi Carti - Bentley Ride",
+        "url": "/music/DEMO EXP/Playboi Carti - Bentley Ride.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Say It’s All Right",
+        "url": "/music/DEMO EXP/Say It’s All Right.mp3",
+        "cover": ""
+      },
+      {
+        "name": "The Awake",
+        "url": "/music/DEMO EXP/The Awake.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Trippie red - Early Trapping",
+        "url": "/music/DEMO EXP/Trippie red - Early Trapping.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Used 2 Be Yours",
+        "url": "/music/DEMO EXP/Used 2 Be Yours.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Vivid Edge",
+        "url": "/music/DEMO EXP/Vivid Edge.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Young Thug - With My Twins",
+        "url": "/music/DEMO EXP/Young Thug - With My Twins.mp3",
+        "cover": ""
+      }
+    ]
+  },
+  {
+    "name": "R&B",
+    "cover": "",
+    "video": "",
+    "tracks": [
+      {
+        "name": "Echoes",
+        "url": "/music/R&B/Echoes.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Endless (Cover)",
+        "url": "/music/R&B/Endless (Cover).mp3",
+        "cover": ""
+      },
+      {
+        "name": "Fast Lane Memories",
+        "url": "/music/R&B/Fast Lane Memories.mp3",
+        "cover": ""
+      },
+      {
+        "name": "KID LAROI - Can't Let Go Feat Young Thug",
+        "url": "/music/R&B/KID LAROI - Can't Let Go Feat Young Thug.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Last Hour",
+        "url": "/music/R&B/Last Hour.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Thunder Running",
+        "url": "/music/R&B/Thunder Running.mp3",
+        "cover": ""
+      },
+      {
+        "name": "We Believe",
+        "url": "/music/R&B/We Believe.mp3",
+        "cover": ""
+      }
+    ]
+  },
+  {
+    "name": "reggeton",
+    "cover": "",
+    "video": "",
+    "tracks": [
+      {
+        "name": "Unite",
+        "url": "/music/reggeton/Unite.mp3",
+        "cover": ""
+      }
+    ]
+  },
+  {
+    "name": "Techno",
+    "cover": "",
+    "video": "",
+    "tracks": [
+      {
+        "name": "Silent Sun",
+        "url": "/music/Techno/Silent Sun.mp3",
+        "cover": ""
+      }
+    ]
+  },
+  {
+    "name": "TRAP RAP",
+    "cover": "",
+    "video": "",
+    "tracks": [
+      {
+        "name": "Crazy Shit",
+        "url": "/music/TRAP RAP/Crazy Shit.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Digits don’t lie",
+        "url": "/music/TRAP RAP/Digits don’t lie.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Dumb",
+        "url": "/music/TRAP RAP/Dumb.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Fed'up",
+        "url": "/music/TRAP RAP/Fed'up.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Hustle",
+        "url": "/music/TRAP RAP/Hustle.mp3",
+        "cover": ""
+      },
+      {
+        "name": "My Mind Blew It",
+        "url": "/music/TRAP RAP/My Mind Blew It.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Paradox",
+        "url": "/music/TRAP RAP/Paradox.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Showtime",
+        "url": "/music/TRAP RAP/Showtime.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Stack it up",
+        "url": "/music/TRAP RAP/Stack it up.mp3",
+        "cover": ""
+      },
+      {
+        "name": "Turn nothing to something ",
+        "url": "/music/TRAP RAP/Turn nothing to something .mp3",
+        "cover": ""
+      },
+      {
+        "name": "Wasted Love",
+        "url": "/music/TRAP RAP/Wasted Love.mp3",
+        "cover": ""
+      }
+    ]
+  },
+  {
+    "name": "UK DRILL",
+    "cover": "",
+    "video": "",
+    "tracks": [
+      {
+        "name": "Cash in My Hand",
+        "url": "/music/UK DRILL/Cash in My Hand.mp3",
+        "cover": ""
       }
     ]
   }
