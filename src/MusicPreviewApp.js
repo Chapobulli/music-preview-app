@@ -127,7 +127,7 @@ const albums =  [
   {
     "name": "DEMO EXP",
     "cover": "/music/DEMO EXP/cover.jpg",
-    "video": "",
+    "video": "/music/DEMO EXP/video.mp4",
     "tracks": [
       {
         "name": "ALL BLACK RUNNER - All Black Shit",
@@ -233,50 +233,50 @@ const albums =  [
   },
   {
     "name": "R&B",
-    "cover": "",
+    "cover": "/music/R&B/cover.jpg",
     "video": "/music/R&B/video.mp4",
     "tracks": [
       {
         "name": "Echoes",
         "url": "/music/R&B/Echoes.mp3",
-        "cover": ""
+        "cover": "/music/R&B/cover.jpg"
       },
       {
         "name": "Endless (Cover)",
         "url": "/music/R&B/Endless (Cover).mp3",
-        "cover": ""
+        "cover": "/music/R&B/cover.jpg"
       },
       {
         "name": "Fast Lane Memories",
         "url": "/music/R&B/Fast Lane Memories.mp3",
-        "cover": ""
+        "cover": "/music/R&B/cover.jpg"
       },
       {
         "name": "KID LAROI - Can't Let Go Feat Young Thug",
         "url": "/music/R&B/KID LAROI - Can't Let Go Feat Young Thug.mp3",
-        "cover": ""
+        "cover": "/music/R&B/cover.jpg"
       },
       {
         "name": "Last Hour",
         "url": "/music/R&B/Last Hour.mp3",
-        "cover": ""
+        "cover": "/music/R&B/cover.jpg"
       },
       {
         "name": "Thunder Running",
         "url": "/music/R&B/Thunder Running.mp3",
-        "cover": ""
+        "cover": "/music/R&B/cover.jpg"
       },
       {
         "name": "We Believe",
         "url": "/music/R&B/We Believe.mp3",
-        "cover": ""
+        "cover": "/music/R&B/cover.jpg"
       }
     ]
   },
   {
     "name": "reggeton",
     "cover": "/music/reggeton/cover.jpg",
-    "video": "",
+    "video": "/music/reggeton/video.mp4",
     "tracks": [
       {
         "name": "Unite",
@@ -288,7 +288,7 @@ const albums =  [
   {
     "name": "Techno",
     "cover": "/music/Techno/cover.jpg",
-    "video": "",
+    "video": "/music/Techno/video.mp4",
     "tracks": [
       {
         "name": "Silent Sun",
@@ -300,7 +300,7 @@ const albums =  [
   {
     "name": "TRAP RAP",
     "cover": "/music/TRAP RAP/cover.jpg",
-    "video": "",
+    "video": "/music/TRAP RAP/video.mp4",
     "tracks": [
       {
         "name": "Crazy Shit",
@@ -362,7 +362,7 @@ const albums =  [
   {
     "name": "UK DRILL",
     "cover": "/music/UK DRILL/cover.jpg",
-    "video": "",
+    "video": "/music/UK DRILL/video.mp4",
     "tracks": [
       {
         "name": "Cash in My Hand",
