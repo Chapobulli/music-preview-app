@@ -232,6 +232,70 @@ const albums =  [
     ]
   },
   {
+    "name": "Juice WRLD",
+    "cover": "/music/Juice WRLD/cover.jpg",
+    "video": "/music/Juice WRLD/video.mp4",
+    "tracks": [
+      {
+        "name": "Cold as My Heart . Juice WRLD",
+        "url": "/music/Juice WRLD/Cold as My Heart . Juice WRLD.mp3",
+        "cover": "/music/Juice WRLD/cover.jpg"
+      },
+      {
+        "name": "Juice Wrld - Drown Out Your Name",
+        "url": "/music/Juice WRLD/Juice Wrld - Drown Out Your Name.mp3",
+        "cover": "/music/Juice WRLD/cover.jpg"
+      },
+      {
+        "name": "Juice Wrld - Numb Nights",
+        "url": "/music/Juice WRLD/Juice Wrld - Numb Nights.mp3",
+        "cover": "/music/Juice WRLD/cover.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Post Malone X THE KID LAROI (Unrelased Album)",
+    "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg",
+    "video": "/music/Post Malone X THE KID LAROI (Unrelased Album)/video.mp4",
+    "tracks": [
+      {
+        "name": "Mad",
+        "url": "/music/Post Malone X THE KID LAROI (Unrelased Album)/Mad.mp3",
+        "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg"
+      },
+      {
+        "name": "Post Malone- Night Calls",
+        "url": "/music/Post Malone X THE KID LAROI (Unrelased Album)/Post Malone- Night Calls.mp3",
+        "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg"
+      },
+      {
+        "name": "Problems With Me - Caught Up Again",
+        "url": "/music/Post Malone X THE KID LAROI (Unrelased Album)/Problems With Me - Caught Up Again.mp3",
+        "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg"
+      },
+      {
+        "name": "The Kid LAROI - Gone",
+        "url": "/music/Post Malone X THE KID LAROI (Unrelased Album)/The Kid LAROI - Gone.mp3",
+        "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg"
+      },
+      {
+        "name": "The Kid LAROI - Hold on Feat Young Thug",
+        "url": "/music/Post Malone X THE KID LAROI (Unrelased Album)/The Kid LAROI - Hold on Feat Young Thug.mp3",
+        "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg"
+      },
+      {
+        "name": "The Kid LAROI - Outside",
+        "url": "/music/Post Malone X THE KID LAROI (Unrelased Album)/The Kid LAROI - Outside.mp3",
+        "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg"
+      },
+      {
+        "name": "The Kid LAROI - Thunder Running Feat Post Malone",
+        "url": "/music/Post Malone X THE KID LAROI (Unrelased Album)/The Kid LAROI - Thunder Running Feat Post Malone.mp3",
+        "cover": "/music/Post Malone X THE KID LAROI (Unrelased Album)/cover.jpg"
+      }
+    ]
+  },
+  {
     "name": "R&B",
     "cover": "/music/R&B/cover.jpg",
     "video": "/music/R&B/video.mp4",
@@ -259,6 +323,11 @@ const albums =  [
       {
         "name": "Last Hour",
         "url": "/music/R&B/Last Hour.mp3",
+        "cover": "/music/R&B/cover.jpg"
+      },
+      {
+        "name": "Mac Miller - Between the Threads",
+        "url": "/music/R&B/Mac Miller - Between the Threads.mp3",
         "cover": "/music/R&B/cover.jpg"
       },
       {
@@ -368,6 +437,103 @@ const albums =  [
         "name": "Cash in My Hand",
         "url": "/music/UK DRILL/Cash in My Hand.mp3",
         "cover": "/music/UK DRILL/cover.jpg"
+      }
+    ]
+  },
+  {
+    "name": "VAMP BOYZ",
+    "cover": "/music/VAMP BOYZ/cover.png",
+    "video": "/music/VAMP BOYZ/video.mp4",
+    "tracks": [
+      {
+        "name": "Big Dreams Fast Lane",
+        "url": "/music/VAMP BOYZ/Big Dreams Fast Lane.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Block Out the Pain never losing",
+        "url": "/music/VAMP BOYZ/Block Out the Pain never losing.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Countin' Up",
+        "url": "/music/VAMP BOYZ/Countin' Up.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Don't Get Too Close - not edited",
+        "url": "/music/VAMP BOYZ/Don't Get Too Close - not edited.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Don't get too close mp3",
+        "url": "/music/VAMP BOYZ/Don't get too close mp3.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Flex at Midnight",
+        "url": "/music/VAMP BOYZ/Flex at Midnight.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Floating Now",
+        "url": "/music/VAMP BOYZ/Floating Now.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Golden Coupe",
+        "url": "/music/VAMP BOYZ/Golden Coupe.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Plugged In",
+        "url": "/music/VAMP BOYZ/Plugged In.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Purple Drift",
+        "url": "/music/VAMP BOYZ/Purple Drift.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Rockstar Made",
+        "url": "/music/VAMP BOYZ/Rockstar Made.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Sippin'",
+        "url": "/music/VAMP BOYZ/Sippin'.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "STARDUST",
+        "url": "/music/VAMP BOYZ/STARDUST.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Static Vein",
+        "url": "/music/VAMP BOYZ/Static Vein.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "The Run",
+        "url": "/music/VAMP BOYZ/The Run.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Turn the Winter",
+        "url": "/music/VAMP BOYZ/Turn the Winter.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Wheels on Fire",
+        "url": "/music/VAMP BOYZ/Wheels on Fire.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
+      },
+      {
+        "name": "Win Again",
+        "url": "/music/VAMP BOYZ/Win Again.mp3",
+        "cover": "/music/VAMP BOYZ/cover.png"
       }
     ]
   }
